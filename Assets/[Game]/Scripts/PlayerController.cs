@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     void Start()
     {
-        
+
     }
 
 
