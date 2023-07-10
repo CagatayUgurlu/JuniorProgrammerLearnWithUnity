@@ -11,7 +11,7 @@ public class PlayerController2 : MonoBehaviour
     public GameObject projectilePrefab;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class PlayerController2 : MonoBehaviour
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
 
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //Instantiate is allows you to copy prefab
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
