@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 20;
     private float spawnTime = 2f;
     private float spawnRate = 1.5f;
+
     void Start()
     {
         InvokeRepeating("SpawnAnimal", spawnTime, spawnRate);
