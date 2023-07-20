@@ -6,6 +6,7 @@ public class RepeatBackground4 : MonoBehaviour
 {
     private Vector3 startPos;
     private float repeatWidth;
+
     void Start()
     {
         startPos = transform.position;
