@@ -7,6 +7,7 @@ public class PlayerController3 : MonoBehaviour
     private float speed = 10f;
     private Rigidbody playerRb;
     private float zBound = 5f;
+    public 
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
