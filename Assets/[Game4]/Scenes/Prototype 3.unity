@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 835818922}
   - component: {fileID: 835818924}
   - component: {fileID: 835818925}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,6 +624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30c6b7a060ec4548af242d322ddef1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstaclePrefabs:
+  - {fileID: 4148799911176178480, guid: 026ca4cccb12bdd40af2f62088a34f98, type: 3}
+  - {fileID: 583168493235693617, guid: dd52af37d7d473c44867af12d37e5ce9, type: 3}
+  - {fileID: 6314259928416413934, guid: 65369c56d7b0da24eb1ebe1a34bf6c24, type: 3}
+  - {fileID: 7866763849432812716, guid: db6531272320eb74f9d09ecdd70b479c, type: 3}
   obstaclePrefab: {fileID: 4148799911176178480, guid: 026ca4cccb12bdd40af2f62088a34f98, type: 3}
   startDelay: 2
   repeatRate: 2
@@ -639,7 +644,7 @@ GameObject:
   - component: {fileID: 2014335014}
   - component: {fileID: 2014335013}
   - component: {fileID: 2014335012}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
