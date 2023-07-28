@@ -19,6 +19,7 @@ public class PlayerController4 : MonoBehaviour
     public bool isOnGround = true;
     public bool gameOver = false;
     public bool doubleJumpUsed = false;
+    public bool doubleSpeed = false;
 
     void Start()
     {
@@ -30,6 +31,26 @@ public class PlayerController4 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        JumpAndDoubleJump();
+        SpeedMultiplier();
+    }
+
+    private void SpeedMultiplier()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            doubleSpeed = true;
+            playerAnim.SetFloat("Speed_Multiplier", 2.0f);
+        }
+        else if (doubleSpeed)
+        {
+            doubleSpeed = false;
+            playerAnim.SetFloat("Speed_Multiplier", 1.0f);
+        }
+    }
+
+    private void JumpAndDoubleJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
         {
@@ -49,6 +70,7 @@ public class PlayerController4 : MonoBehaviour
             playerAudio.PlayOneShot(jumpSound, 1f);
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
