@@ -12,6 +12,7 @@ TagManager:
   - Top
   - Powerup
   - Enemy
+  - PlayerGoal
   layers:
   - Default
   - TransparentFX
