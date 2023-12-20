@@ -29,14 +29,15 @@ public class GameManager : MonoBehaviour
     {
         if (!playerController4Script.gameOver)
         {
-            if (playerController4Script.doubleSpeed)
-            {
-                score += 2;
-            }
-            else
-            {
-                score++;
-            }
+            return;
+        }
+        if (playerController4Script.doubleSpeed)
+        {
+            score += 2;
+        }
+        else
+        {
+            score++;
         }
     }
 
