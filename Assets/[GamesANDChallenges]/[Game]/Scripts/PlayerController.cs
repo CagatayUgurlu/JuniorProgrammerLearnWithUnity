@@ -9,13 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 45f;
     private float horizontalInput;
     private float verticalInput;
-    void Start()
-    {
 
-    }
-
-
-    void Update()
+    void FixedUpdate()
     {
         // This is where we get player input
         horizontalInput = Input.GetAxis("Horizontal");
