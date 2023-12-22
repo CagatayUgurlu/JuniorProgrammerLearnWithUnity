@@ -147,7 +147,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.1
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19644165106a81b42a950e9240153859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horsePower: 15000
+  horsePower: 12000
   turnSpeed: 45
 --- !u!54 &739325114
 Rigidbody:
@@ -590,10 +590,10 @@ BoxCollider:
   m_GameObject: {fileID: 739325108}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4149134, y: 4.5235004, z: 6.7103386}
-  m_Center: {x: 0.00000011920929, y: 2.275199, z: 0.010605812}
+  m_Size: {x: 3.4149134, y: 4.0573907, z: 6.7103386}
+  m_Center: {x: 0.00000011920929, y: 2.5082538, z: 0.010605812}
 --- !u!1001 &770533034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -675,7 +675,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.1
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -1134,7 +1134,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.1
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -1232,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.747786
+      value: 2.47
       objectReference: {fileID: 0}
     - target: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1287,7 +1287,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.1
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
