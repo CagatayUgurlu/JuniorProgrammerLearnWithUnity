@@ -596,6 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horsePower: 12000
   turnSpeed: 45
+  centerOfMass: {fileID: 350780873}
 --- !u!54 &739325114
 Rigidbody:
   m_ObjectHideFlags: 0
