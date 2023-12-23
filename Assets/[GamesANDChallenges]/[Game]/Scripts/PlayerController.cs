@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     // Private variables
-    [SerializeField] private float speed = 20f;
+    [SerializeField] private float speed = 0f;
     [SerializeField] private float horsePower = 0f;
     [SerializeField] private float turnSpeed = 45f;
     private float horizontalInput;
@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRb;
     [SerializeField] GameObject centerOfMass;
+    [SerializeField] TextMeshProUGUI speedometer;
 
     private void Start()
     {
@@ -32,5 +33,6 @@ public class PlayerController : MonoBehaviour
         playerRb.AddRelativeForce(Vector3.forward * horsePower * verticalInput);
         // Rotates the car based on horizontal input
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+        speed = playerRb.velocity.magnitude * 2.237f; // For kph, change to 3.6
     }
 }
