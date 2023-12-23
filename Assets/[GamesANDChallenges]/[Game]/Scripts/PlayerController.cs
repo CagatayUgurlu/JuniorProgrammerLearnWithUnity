@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRb;
     [SerializeField] GameObject centerOfMass;
-    [SerializeField] TextMeshProUGUI speedometer;
+    [SerializeField] TextMeshProUGUI speedometerText;
 
     private void Start()
     {
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         playerRb.AddRelativeForce(Vector3.forward * horsePower * verticalInput);
         // Rotates the car based on horizontal input
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
-        speed = playerRb.velocity.magnitude * 2.237f; // For kph, change to 3.6
+        speed = (playerRb.velocity.magnitude * 2.237f); // For kph, change to 3.6
+        speedometerText.SetText("Speed: " + speed + "mph");
     }
 }
