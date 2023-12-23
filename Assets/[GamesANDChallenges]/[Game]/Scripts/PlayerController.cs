@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PlayerController : MonoBehaviour
 {
     // Private variables
-    //[SerializeField] private float speed = 20f;
+    [SerializeField] private float speed = 20f;
     [SerializeField] private float horsePower = 0f;
     [SerializeField] private float turnSpeed = 45f;
     private float horizontalInput;
