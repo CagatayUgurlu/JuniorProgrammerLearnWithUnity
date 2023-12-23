@@ -32,16 +32,40 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        // Moves the car forward based on vertical input
-        // transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        //transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
-        playerRb.AddRelativeForce(Vector3.forward * horsePower * verticalInput);
-        // Rotates the car based on horizontal input
-        transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
-        speed = Mathf.Round(playerRb.velocity.magnitude * 2.237f); // For kph, change to 3.6
-        speedometerText.SetText("Speed: " + speed + "mph");
+        if (isOnGround())
+        {
+            // Moves the car forward based on vertical input
+            // transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+            //transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
+            playerRb.AddRelativeForce(Vector3.forward * horsePower * verticalInput);
+            // Rotates the car based on horizontal input
+            transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+            speed = Mathf.Round(playerRb.velocity.magnitude * 2.237f); // For kph, change to 3.6
+            speedometerText.SetText("Speed: " + speed + "mph");
 
-        rpm = Mathf.Round(speed % 30) * 40;
-        rpmText.SetText("RPM :" + rpm);
+            rpm = Mathf.Round(speed % 30) * 40;
+            rpmText.SetText("RPM :" + rpm);
+        }
+        
+    }
+
+    bool isOnGround()
+    {
+        wheelsOnGround = 0;
+        foreach(WheelCollider wheel in allWheels)
+        {
+            if(wheel.isGrounded) 
+            {
+                wheelsOnGround++;
+            }
+        }
+        if (wheelsOnGround == 4)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
