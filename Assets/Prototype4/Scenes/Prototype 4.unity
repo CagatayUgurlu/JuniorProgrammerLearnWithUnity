@@ -375,9 +375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a1902c5da835d42a57939471957675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 250
+  speed: 350
   hasPowerup: 0
-  powerUpStrength: 15
+  powerUpStrength: 20
   powerupIndicator: {fileID: 1742899842205797}
 --- !u!1 &1211016355
 GameObject:
